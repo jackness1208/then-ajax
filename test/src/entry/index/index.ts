@@ -1,4 +1,4 @@
-import thenAjax, { thenJsonp } from '../../../../output/then-ajax';
+import {thenAjax, thenJsonp } from '../../../../output/then-ajax';
 import wDemo from '../../components/widget/demo/demo';
 import './index.scss';
 wDemo();

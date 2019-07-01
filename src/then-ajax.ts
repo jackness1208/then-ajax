@@ -8,7 +8,7 @@ function thenAjax(op: IAjaxOptions): Promise<any> {
       },
       error(er: Error) {
         reject(er);
-      },
+      }
     });
     ajax(iParam);
   });
@@ -19,7 +19,7 @@ function thenGet(url: string, data?: any, options?: IAjaxOptions) {
     data,
     dataType: 'json',
     methods: 'get',
-    url,
+    url
   }, options));
 }
 
@@ -28,7 +28,7 @@ function thenPost(url: string, data?: any, options?: IAjaxOptions) {
     data,
     dataType: 'json',
     methods: 'post',
-    url,
+    url
   }, options));
 }
 
@@ -37,16 +37,15 @@ function thenJsonp(url: string, data?: any, options?: IAjaxOptions) {
     data,
     dataType: 'jsonp',
     methods: 'get',
-    url,
+    url
   }, options));
 }
 
-export default thenAjax;
 export {
   thenAjax,
   ajax,
   IAjaxOptions,
   thenGet,
   thenPost,
-  thenJsonp,
+  thenJsonp
 };

@@ -1,6 +1,6 @@
 {
   "name": "then-ajax",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "async ajax base on $.ajax",
   "main": "output/then-ajax.js",
   "types": "output/then-ajax.d.ts",
@@ -9,7 +9,7 @@
     "build": "cross-env NODE_ENV=production rollup --config ./rollup.config.js",
     "w": "rollup --watch --config ./rollup.config.js",
     "prepublish": "cross-env NODE_ENV=production rollup --config ./rollup.config.js",
-    "test": "yyl watch --proxy --config ./test/yyl.config.js" 
+    "test": "yyl watch --proxy --config ./test/yyl.config.js"
   },
   "repository": {
     "type": "git",
