@@ -1,4 +1,4 @@
-# sync-jsonp
+# then-ajax
 
 ## 安装
 ```bash
