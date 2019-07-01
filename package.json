@@ -1,0 +1,38 @@
+{
+  "name": "then-ajax",
+  "version": "0.1.0",
+  "description": "async ajax base on $.ajax",
+  "main": "output/then-ajax.js",
+  "types": "output/then-ajax.d.ts",
+  "scripts": {
+    "dev": "rollup --config ./rollup.config.js",
+    "build": "cross-env NODE_ENV=production rollup --config ./rollup.config.js",
+    "w": "rollup --watch --config ./rollup.config.js",
+    "prepublish": "cross-env NODE_ENV=production rollup --config ./rollup.config.js",
+    "test": "yyl watch --proxy --config ./test/yyl.config.js" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackness1208/then-ajax.git"
+  },
+  "keywords": [
+    "async",
+    "ajax"
+  ],
+  "author": "jackness",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jackness1208/then-ajax/issues"
+  },
+  "homepage": "https://github.com/jackness1208/then-ajax#readme",
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "rollup": "^1.9.0",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^4.2.1",
+    "rollup-plugin-typescript2": "^0.20.1",
+    "rollup-plugin-uglify": "^6.0.2",
+    "typescript": "^3.4.2"
+  }
+}

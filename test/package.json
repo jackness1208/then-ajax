@@ -1,0 +1,9 @@
+{
+  "name": "test",
+  "scripts": {
+    "watch": "yyl watch --proxy",
+    "all": "yyl all",
+    "commit": "yyl all --isCommit",
+    "remote": "yyl watch --proxy --remote"
+  }
+}

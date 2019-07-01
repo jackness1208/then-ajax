@@ -1,0 +1,14 @@
+/.idea
+/.settings
+/.project
+/.gitignore
+/.rpt2_cache
+/node_modules
+/test
+/.tmp
+
+*.db
+*.bak
+*.tmp
+
+.DS_Store
