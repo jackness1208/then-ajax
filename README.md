@@ -6,7 +6,7 @@ npm install then-ajax --save
 ```
 ## 使用
 ```javascript
-import thenAjax, { thenPost, thenGet, thenJsonp, IAjaxOptions} from 'then-ajax'
+import {thenAjax, thenPost, thenGet, thenJsonp, IAjaxOptions} from 'then-ajax'
 ```
 
 ## api

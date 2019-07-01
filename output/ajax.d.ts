@@ -15,4 +15,4 @@ interface IAjaxOptions {
 }
 declare function ajax(options: IAjaxOptions): void;
 export default ajax;
-export { IAjaxOptions, };
+export { IAjaxOptions };

@@ -41,7 +41,7 @@ function setObjData(data: any, parentName?: string) {
       arr = arr.concat(encodeData(
         typeof value === 'object' ? `${i}` : '',
         value,
-        parentName,
+        parentName
       ));
     });
   } else if (Object.prototype.toString.call(data) === '[object Object]') {
@@ -209,5 +209,5 @@ function ajax(options: IAjaxOptions) {
 
 export default ajax;
 export {
-  IAjaxOptions,
+  IAjaxOptions
 };
