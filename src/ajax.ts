@@ -185,8 +185,8 @@ function ajax(options: IAjaxOptions) {
       timeoutFlag = setTimeout(() => {
         if (dataType === 'jsonp') {
           if (callbackName && script) {
-            delete window[callbackName];
-            document.body.removeChild(script);
+            // delete window[callbackName];
+            // document.body.removeChild(script);
           }
         } else {
           timeoutBool = true;

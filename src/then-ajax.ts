@@ -2,8 +2,20 @@ import ajax, { IAjaxOptions } from './ajax';
 
 function thenAjax(op: IAjaxOptions): Promise<any> {
   return new Promise((resolve, reject) => {
+    let isTimeout = false;
+    let timeoutKey: any;
+    if (op.timeout) {
+      timeoutKey = setTimeout(() => {
+        isTimeout = true;
+        reject(new Error('timeout'));
+      }, op.timeout);
+    }
     const iParam = Object.assign(op, {
       success(data: any) {
+        if (isTimeout) {
+          return;
+        }
+        clearTimeout(timeoutKey);
         resolve(data);
       },
       error(er: Error) {
