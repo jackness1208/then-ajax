@@ -1,6 +1,11 @@
-import ajax, { IAjaxOptions } from './ajax';
+import { AjaxOptions as _AjaxOptions, ajax as _ajax } from './ajax';
 
-function thenAjax(op: IAjaxOptions): Promise<any> {
+export const ajax = _ajax
+export interface AjaxOptions extends _AjaxOptions {
+
+}
+
+export function thenAjax(op: AjaxOptions): Promise<any> {
   return new Promise((resolve, reject) => {
     let isTimeout = false;
     let timeoutKey: any;
@@ -26,7 +31,7 @@ function thenAjax(op: IAjaxOptions): Promise<any> {
   });
 }
 
-function thenGet(url: string, data?: any, options?: IAjaxOptions) {
+export function thenGet(url: string, data?: any, options?: AjaxOptions) {
   return thenAjax(Object.assign({
     data,
     dataType: 'json',
@@ -35,7 +40,7 @@ function thenGet(url: string, data?: any, options?: IAjaxOptions) {
   }, options));
 }
 
-function thenPost(url: string, data?: any, options?: IAjaxOptions) {
+export function thenPost(url: string, data?: any, options?: AjaxOptions) {
   return thenAjax(Object.assign({
     data,
     dataType: 'json',
@@ -44,7 +49,7 @@ function thenPost(url: string, data?: any, options?: IAjaxOptions) {
   }, options));
 }
 
-function thenJsonp(url: string, data?: any, options?: IAjaxOptions) {
+export function thenJsonp(url: string, data?: any, options?: AjaxOptions) {
   return thenAjax(Object.assign({
     data,
     dataType: 'jsonp',
@@ -52,12 +57,3 @@ function thenJsonp(url: string, data?: any, options?: IAjaxOptions) {
     url
   }, options));
 }
-
-export {
-  thenAjax,
-  ajax,
-  IAjaxOptions,
-  thenGet,
-  thenPost,
-  thenJsonp
-};

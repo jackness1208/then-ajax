@@ -1,5 +1,5 @@
 declare type callback = (...args: any[]) => any;
-interface IAjaxOptions {
+export interface AjaxOptions {
     data?: any;
     url?: string;
     methods?: string;
@@ -12,7 +12,7 @@ interface IAjaxOptions {
     success?: callback;
     jsonp?: string;
     jsonpcb?: string;
+    withCredentials?: boolean;
 }
-declare function ajax(options: IAjaxOptions): void;
-export default ajax;
-export { IAjaxOptions };
+export declare function ajax(options: AjaxOptions): void;
+export {};
