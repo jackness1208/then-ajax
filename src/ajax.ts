@@ -1,5 +1,5 @@
 type callback = (...args: any[]) => any;
-interface IAjaxOptions {
+export interface AjaxOptions {
   data?: any;
   url?: string;
   methods?: string;
@@ -12,6 +12,7 @@ interface IAjaxOptions {
   success?: callback;
   jsonp?: string;
   jsonpcb?: string;
+  withCredentials?: boolean;
 }
 
 function encodeData(name: string, value: any, parentName?: string) {
@@ -66,7 +67,7 @@ function setStrData(data: string) {
   return arr;
 }
 
-function ajax(options: IAjaxOptions) {
+export function ajax(options: AjaxOptions) {
   let url = options.url || '';
   const type = (options.methods || 'get').toLowerCase();
   let data = options.data || null;
@@ -207,7 +208,3 @@ function ajax(options: IAjaxOptions) {
   }
 }
 
-export default ajax;
-export {
-  IAjaxOptions
-};
